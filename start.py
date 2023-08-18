@@ -1626,8 +1626,8 @@ if __name__ == '__main__':
 
                 proxies = handleProxyList(con, proxy_li, proxy_ty, url)
                 for thread_id in range(threads):
-                    HttpFlood(thread_id, url, host, method, rpc, event,
-                              uagents, referers, proxies).start()
+                    HttpFlood(thread_id, target, host, method, rpc, synevent,
+                              useragents, referers, proxies).start()
 
             if method in Methods.LAYER4_METHODS:
                 target = URL(urlraw)
